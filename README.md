@@ -45,7 +45,7 @@ A continuación, se incluye el diagrama UML que ilustra las relaciones entre las
 ## Pruebas Unitarias
   - Cobertura completa de métodos clave en ambas clases.
   - Validación del comportamiento bajo diferentes escenarios.
-  - ![Pruebas Unitarias](images/test.png)
+   ![Pruebas Unitarias](images/test.png)
 
 
 ## Autor

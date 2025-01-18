@@ -23,10 +23,13 @@ El código está diseñado con un enfoque modular, orientado a objetos, y ha sid
   - Extracto mensual: invoca al método heredado.
   - Un nuevo método imprimir que retorna el saldo de la cuenta, la comisión mensual, el número de transacciones realizadas (suma de cantidad de consignaciones y retiros) y el valor de sobregiro.
 
-- **Pruebas Unitarias:**
-  - Cobertura completa de métodos clave en ambas clases.
-  - Validación del comportamiento bajo diferentes escenarios.
 
+## Requisitos
+. Java JDK 8 o superior.
+
+. Maven
+
+. JUnit 5 (para pruebas unitarias).
 
 
 ## Estructura del Proyecto
@@ -37,7 +40,12 @@ El código está diseñado con un enfoque modular, orientado a objetos, y ha sid
 
 A continuación, se incluye el diagrama UML que ilustra las relaciones entre las clases principales del proyecto. Puedes visualizar el diagrama en la siguiente imagen:
 
-![Diagrama UML](images/Class_UML.png)
+![Diagrama UML](images/class_UML.png)
+
+## Pruebas Unitarias
+  - Cobertura completa de métodos clave en ambas clases.
+  - Validación del comportamiento bajo diferentes escenarios.
+  - ![Pruebas Unitarias](images/test.png)
 
 
 ## Autor

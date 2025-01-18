@@ -11,60 +11,35 @@ El código está diseñado con un enfoque modular, orientado a objetos, y ha sid
 ## Características
 
 - **Cuenta de Ahorros (SavingsAccount):**
-  - Activación basada en el saldo mínimo requerido.
-  - Aplicación de tarifas por retiros excesivos.
-  - Generación de intereses mensuales.
+  - Consignar una cantidad de dinero en la cuenta actualizando su saldo.
+  - Retirar una cantidad de dinero en la cuenta actualizando su saldo. 
+  - Calcular el interés mensual de la cuenta y actualiza el saldo correspondiente.
+  - Extracto mensual
   - Impresión de detalles de la cuenta.
 
 - **Cuenta Corriente (CheckingAccount):**
-  - Gestión de sobregiros.
-  - Reducción de sobregiros mediante depósitos.
-  - Cálculo y deducción de tarifas mensuales.
-  - Impresión de detalles de la cuenta.
+  - Retirar: se retira dinero de la cuenta actualizando su saldo. Se puede retirar dinero superior al saldo. El dinero que se debe queda como sobregiro.
+  - Consignar: invoca al método heredado. Si hay sobregiro, la cantidad consignada reduce el sobregiro.
+  - Extracto mensual: invoca al método heredado.
+  - Un nuevo método imprimir que retorna el saldo de la cuenta, la comisión mensual, el número de transacciones realizadas (suma de cantidad de consignaciones y retiros) y el valor de sobregiro.
 
 - **Pruebas Unitarias:**
   - Cobertura completa de métodos clave en ambas clases.
   - Validación del comportamiento bajo diferentes escenarios.
 
----
+
 
 ## Estructura del Proyecto
-![Estructura](../bankaccount/images/structure
-.png)
-.
-├── src
-│   ├── main
-│   │   └── java
-│   │       └── project
-│   │           └── bankacount
-│   │               ├── Account.java
-│   │               ├── App.java
-│   │               ├── CheckingAccount.java
-│   │               └── SavingsAccount.java
-│   └── test
-│       └── java
-│           └── project
-│               └── bankacount
-│                   ├── AccountTest.java
-│                   ├── AppTest.java
-│                   ├── CheckingAccountTest.java
-│                   └── SavingsAccountTest.java
+![Estructura del Proyecto](images/structure.png)
 
 
 ## Diagrama UML
 
 A continuación, se incluye el diagrama UML que ilustra las relaciones entre las clases principales del proyecto. Puedes visualizar el diagrama en la siguiente imagen:
 
-![Diagrama UML](images/Class_UML
-.png)
+![Diagrama UML](images/Class_UML.png)
 
-Para añadir o actualizar el diagrama UML, reemplaza la imagen en la carpeta `uml` con un archivo PNG del nuevo diagrama.
 
----
+## Autor
 
-## Instalación
-
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/tuusuario/bank-account-project.git
-   cd bank-account-project
+Yuliana Alcalá

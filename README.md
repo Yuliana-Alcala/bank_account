@@ -1,8 +1,8 @@
-# BankAccount Project
+# Bank Account
 
 ## Descripción
 
-El proyecto **BankAccount** es una aplicación de gestión bancaria desarrollada en Java. Esta solución permite a los usuarios manejar diferentes tipos de cuentas bancarias, como cuentas de ahorro (**SavingsAccount**) y cuentas corrientes (**CheckingAccount**). El sistema incluye funciones como depósitos, retiros, cálculo de intereses, manejo de sobregiros y generación de estados de cuenta mensuales.
+El proyecto **Bank Account** es una aplicación de gestión bancaria desarrollada en Java. Esta solución permite a los usuarios manejar diferentes tipos de cuentas bancarias, como cuentas de ahorro (**SavingsAccount**) y cuentas corrientes (**CheckingAccount**). El sistema incluye funciones como depósitos, retiros, cálculo de intereses, manejo de sobregiros y generación de estados de cuenta mensuales.
 
 El código está diseñado con un enfoque modular, orientado a objetos, y ha sido rigurosamente probado utilizando pruebas unitarias con JUnit 5.
 

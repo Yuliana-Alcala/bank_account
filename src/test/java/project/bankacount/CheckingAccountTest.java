@@ -38,5 +38,6 @@ public class CheckingAccountTest {
         checking.monthlyStatement();
         assertEquals(4719.58349609375, checking.balance);
     }
+
     
 }

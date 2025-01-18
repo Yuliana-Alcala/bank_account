@@ -5,11 +5,7 @@ public class SavingsAccount extends Account {
 
     public SavingsAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
-        updateAccountStatus();
-    }
-
-    private void updateAccountStatus() {
-        isActive = balance >= 10000;
+        this.isActive = balance >= 10000;
     }
 
     @Override
@@ -22,24 +18,28 @@ public class SavingsAccount extends Account {
 
     @Override
     public void withdraw(float amount) {
-        if (isActive && numWithdrawals < 4) {
+        if (isActive) {
             super.withdraw(amount);
-        } else if (isActive) {
-            monthlyFee += 1000; 
-            super.withdraw(amount);
+            updateAccountStatus();
         }
-        updateAccountStatus();
     }
 
     @Override
-    public void generateMonthlyStatement() {
-        super.generateMonthlyStatement();
+    public void monthlyStatement() {
+        if (numWithdrawals > 4) {
+            monthlyFee += (numWithdrawals - 4) * 1000;
+        }
+        super.monthlyStatement();
         updateAccountStatus();
+    }
+
+    private void updateAccountStatus() {
+        isActive = balance >= 10000;
     }
 
     @Override
     public String printDetails() {
-        return super.printDetails() + ", Active: " + isActive;
+        return super.printDetails() + ", Account Active: " + isActive;
     }
 
 }

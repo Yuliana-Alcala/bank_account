@@ -31,16 +31,13 @@ public class Account {
     }
 
     public void calculateMonthlyInterest() {
-        float monthlyInterestRate = annualInterestRate / 12;
-        balance += balance * (monthlyInterestRate / 100);
+        float monthlyInterest = (annualInterestRate / 12) * balance;
+        balance += monthlyInterest;
     }
 
-    public void generateMonthlyStatement() {
+    public void monthlyStatement() {
         balance -= monthlyFee;
         calculateMonthlyInterest();
-        numDeposits = 0;
-        numWithdrawals = 0;
-        monthlyFee = 0;
     }
 
     public String printDetails() {

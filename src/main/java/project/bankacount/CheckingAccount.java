@@ -1,7 +1,7 @@
 package project.bankacount;
 
 public class CheckingAccount extends Account{
-    private float overdraft;
+    float overdraft;
 
     public CheckingAccount(float balance, float annualInterestRate) {
         super(balance, annualInterestRate);
@@ -10,27 +10,31 @@ public class CheckingAccount extends Account{
 
     @Override
     public void withdraw(float amount) {
-        if (amount > balance) {
-            overdraft += amount - balance;
-            balance = 0;
-        } else {
-            balance -= amount;
+        if (amount > 0) {
+            if (amount <= balance) {
+                balance -= amount;
+            } else {
+                overdraft += (amount - balance);
+                balance = 0;
+            }
+            numWithdrawals++;
         }
-        numWithdrawals++;
     }
 
     @Override
     public void deposit(float amount) {
-        if (overdraft > 0) {
-            float remaining = overdraft - amount;
-            if (remaining < 0) {
-                balance += -remaining;
-                overdraft = 0;
-            } else {
-                overdraft = remaining;
+        if (amount > 0) {
+            if (overdraft > 0) {
+                if (amount >= overdraft) {
+                    amount -= overdraft;
+                    overdraft = 0;
+                } else {
+                    overdraft -= amount;
+                    amount = 0;
+                }
             }
-        } else {
-            super.deposit(amount);
+            balance += amount;
+            numDeposits++;
         }
     }
 
